@@ -15,3 +15,14 @@ class ImageImport:
 
     def setImageType(self, image_type):
         self.image_type = image_type
+
+    def imageConvert(self, image, img_type="file"):
+        self.image_type = img_type
+        if self.image_type == "file":
+            self.img_w, self.img_h, self.img_c, self.img_d = dpg.load_image(image)
+        elif self.image_type == "pil":
+            self.img_w, self.img_h, self.img_c, self.img_d = self.PIL_loader(image)
+        elif self.image_type == 'opencv':
+            self.img_w, self.img_h, self.img_c, self.img_d = self.OPENCV_loader(image)
+        elif self.image_type == 'matplotlib':
+            self.img_w, self.img_h, self.img_c, self.img_d = self.MATPLOTLIB_loader(image)
