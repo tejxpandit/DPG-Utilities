@@ -30,3 +30,5 @@ class ImageImport:
     def getImage(self):
         return self.img_w, self.img_h, self.img_c, self.img_d
 
+    def PIL_loader(self, image):
+        return None
