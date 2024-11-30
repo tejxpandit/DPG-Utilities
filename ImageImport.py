@@ -32,3 +32,5 @@ class ImageImport:
 
     def PIL_loader(self, image):
         return None
+    def MATPLOTLIB_loader(self, image):
+        return None
