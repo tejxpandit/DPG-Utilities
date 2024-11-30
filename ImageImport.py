@@ -26,3 +26,7 @@ class ImageImport:
             self.img_w, self.img_h, self.img_c, self.img_d = self.OPENCV_loader(image)
         elif self.image_type == 'matplotlib':
             self.img_w, self.img_h, self.img_c, self.img_d = self.MATPLOTLIB_loader(image)
+        
+    def getImage(self):
+        return self.img_w, self.img_h, self.img_c, self.img_d
+
