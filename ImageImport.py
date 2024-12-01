@@ -32,5 +32,19 @@ class ImageImport:
 
     def PIL_loader(self, image):
         return None
+    
+    def OPENCV_loader(self, image):
+        # Extract image dimensions
+        w, h, c = self.extractDimensions(image)
+        # Convert BGR to RGB
+        frame = np.flip(image, 2)
+        # Flatten N-Dim to 1-Dim Structure
+        frame = frame.ravel()
+        # Change Data Type to float32
+        frame = np.asarray(frame, dtype='f')
+        # Normalize Texture Data
+        tex_data = np.true_divide(frame, 255.0)
+        return w, h, c, tex_data
+
     def MATPLOTLIB_loader(self, image):
         return None
