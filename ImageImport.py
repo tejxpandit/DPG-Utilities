@@ -48,3 +48,19 @@ class ImageImport:
 
     def MATPLOTLIB_loader(self, image):
         return None
+    
+    def extractDimensions(self, image):
+        n = np.ndim(image)
+        d = np.shape(image)
+        w = h = c = 1
+        if n == 1:
+            w = d[0]
+        elif n == 2:
+            w = d[0]
+            h = d[1]
+        else:
+            w = d[0]
+            h = d[1]
+            c = d[2]
+        return w, h, c
+    
