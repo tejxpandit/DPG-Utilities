@@ -12,3 +12,14 @@ class ImageView:
         self.importer = ImageImport()
         self.parent = parent
         self.tex_reg_tag = texture_registry
+        self.item_handler_reg_tag = item_handler_registry
+        self.tex_tag = "image_tex"
+        self.img_tag = "image_view"
+        self.img_width = None
+        self.img_height = None
+        self.img_channels = None
+        self.img_data = None
+        self.img_scale = 1.0
+        self.initTextureRegistry()
+        self.initItemHandlerRegistry()
+        self.initAutoResize()
