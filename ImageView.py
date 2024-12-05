@@ -28,3 +28,7 @@ class ImageView:
     def initTextureRegistry(self):
         if self.tex_reg_tag is None:
             self.tex_reg_tag = dpg.add_texture_registry(show=False)
+
+    # Optional : Change Custom/Existing Texture Registry
+    def setTextureRegistry(self, texture_registry_tag):
+        self.tex_reg_tag = texture_registry_tag
