@@ -23,3 +23,8 @@ class ImageView:
         self.initTextureRegistry()
         self.initItemHandlerRegistry()
         self.initAutoResize()
+
+    # Initialize Texture Registry
+    def initTextureRegistry(self):
+        if self.tex_reg_tag is None:
+            self.tex_reg_tag = dpg.add_texture_registry(show=False)
