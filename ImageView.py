@@ -32,3 +32,8 @@ class ImageView:
     # Optional : Change Custom/Existing Texture Registry
     def setTextureRegistry(self, texture_registry_tag):
         self.tex_reg_tag = texture_registry_tag
+
+    # Initialize Item Handler Registry
+    def initItemHandlerRegistry(self):
+        if self.item_handler_reg_tag is None:
+            self.item_handler_reg_tag = dpg.add_item_handler_registry(show=False)
