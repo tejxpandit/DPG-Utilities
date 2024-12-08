@@ -42,3 +42,7 @@ class ImageView:
     def initAutoResize(self):
         dpg.add_item_resize_handler(parent=self.item_handler_reg_tag, callback=self.autoRescale)
         dpg.bind_item_handler_registry(self.parent, self.item_handler_reg_tag)
+
+    # Set ImageView Parent Container
+    def setParent(self, parent):
+        self.parent = parent
