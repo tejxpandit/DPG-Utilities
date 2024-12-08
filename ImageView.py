@@ -37,3 +37,8 @@ class ImageView:
     def initItemHandlerRegistry(self):
         if self.item_handler_reg_tag is None:
             self.item_handler_reg_tag = dpg.add_item_handler_registry(show=False)
+        
+    # Initialize Auto-Resize
+    def initAutoResize(self):
+        dpg.add_item_resize_handler(parent=self.item_handler_reg_tag, callback=self.autoRescale)
+        dpg.bind_item_handler_registry(self.parent, self.item_handler_reg_tag)
