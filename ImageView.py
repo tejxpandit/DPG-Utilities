@@ -46,3 +46,8 @@ class ImageView:
     # Set ImageView Parent Container
     def setParent(self, parent):
         self.parent = parent
+
+    # Set Image Scale
+    def setImageScale(self, scale):
+        self.img_scale = scale
+
