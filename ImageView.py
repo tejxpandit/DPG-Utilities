@@ -58,3 +58,13 @@ class ImageView:
     # Set Image Max Height
     def setImageHeight(self, height):
         self.img_scale = height / self.img_height
+
+    # Auto-Rescale
+    def autoRescale(self):
+        if self.parent is not None:
+            win_width = dpg.get_item_width(self.parent)
+            win_height = dpg.get_item_height(self.parent)
+            self.setImageWidth(win_width-window_offset)
+            dpg.configure_item(self.img_tag, width=self.img_width*self.img_scale, height=self.img_height*self.img_scale)
+            print(win_width, win_height)
+            print(self.img_scale)
