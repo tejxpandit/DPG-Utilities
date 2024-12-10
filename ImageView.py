@@ -68,3 +68,7 @@ class ImageView:
             dpg.configure_item(self.img_tag, width=self.img_width*self.img_scale, height=self.img_height*self.img_scale)
             print(win_width, win_height)
             print(self.img_scale)
+
+    # IMP : Set Image Type
+    def setImageType(self, image_type):
+        self.importer.setImageType(image_type)
