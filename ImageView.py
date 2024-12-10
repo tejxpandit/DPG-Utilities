@@ -79,3 +79,5 @@ class ImageView:
         self.importer.imageConvert(image)
         # Get Image Data
         self.img_width, self.img_height, self.img_channels, self.img_data = self.importer.getImage()
+        # Add Image Texture to Registry
+        # self.tex_tag = dpg.add_static_texture(width=self.img_width, height=self.img_height, default_value=self.img_data, parent=self.tex_reg_tag)
