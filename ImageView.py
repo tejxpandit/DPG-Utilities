@@ -54,3 +54,7 @@ class ImageView:
     # Set Image Max Width
     def setImageWidth(self, width):
         self.img_scale = width / self.img_width
+
+    # Set Image Max Height
+    def setImageHeight(self, height):
+        self.img_scale = height / self.img_height
