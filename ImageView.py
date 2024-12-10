@@ -72,3 +72,10 @@ class ImageView:
     # IMP : Set Image Type
     def setImageType(self, image_type):
         self.importer.setImageType(image_type)
+
+    # Create New Image
+    def newImage(self, image):
+        # Import Image Data
+        self.importer.imageConvert(image)
+        # Get Image Data
+        self.img_width, self.img_height, self.img_channels, self.img_data = self.importer.getImage()
