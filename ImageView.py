@@ -89,3 +89,12 @@ class ImageView:
     def viewImage(self):
         # Add Image to Parent Container
         self.img_tag = dpg.add_image(texture_tag=self.tex_tag, parent=self.parent, width=self.img_width*self.img_scale, height=self.img_height*self.img_scale)
+
+    # Update Image
+    def updateImage(self, image):
+        # Import Image Data
+        self.importer.imageConvert(image)
+        # Get Image Data
+        self.img_width, self.img_height, self.img_channels, self.img_data = self.importer.getImage()
+        # Update Image Data
+        dpg.set_value(self.tex_tag, self.img_data)
