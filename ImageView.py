@@ -84,3 +84,8 @@ class ImageView:
         self.tex_tag = dpg.add_raw_texture(width=self.img_width, height=self.img_height, default_value=self.img_data, format=dpg.mvFormat_Float_rgba, parent=self.tex_reg_tag)
         # Add Image to Parent Container
         self.img_tag = dpg.add_image(texture_tag=self.tex_tag, parent=self.parent, width=self.img_width*self.img_scale, height=self.img_height*self.img_scale)
+
+    # View Image
+    def viewImage(self):
+        # Add Image to Parent Container
+        self.img_tag = dpg.add_image(texture_tag=self.tex_tag, parent=self.parent, width=self.img_width*self.img_scale, height=self.img_height*self.img_scale)
