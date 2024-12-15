@@ -98,3 +98,12 @@ class ImageView:
         self.img_width, self.img_height, self.img_channels, self.img_data = self.importer.getImage()
         # Update Image Data
         dpg.set_value(self.tex_tag, self.img_data)
+
+    # TODO : Delete Image Textures
+    # TODO : Create Empty Image Placeholder
+    # TODO : Delete previous Image Tex Tag if it exists
+    # TODO : Based on No. of Channels, choose correct format RGB/RGBA
+    # TODO : Allow for non-window based parents
+    # TODO : Enable and disable for autorescale
+    # TODO : Separate base-scale and auto-scale variables
+
