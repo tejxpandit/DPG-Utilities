@@ -107,3 +107,13 @@ class ImageView:
     # TODO : Enable and disable for autorescale
     # TODO : Separate base-scale and auto-scale variables
 
+#----------------
+# EXAMPLE : USAGE
+if __name__ == '__main__': 
+    # DPG Context
+    dpg.create_context()
+    # DPG Viewport
+    dpg.create_viewport(title="Image Viewer", width=600, height=300)
+    # DPG Window
+    dpg.add_window(label="Image Viewer", tag="img_view")
+    dpg.add_group(parent="img_view", tag="main_group")
