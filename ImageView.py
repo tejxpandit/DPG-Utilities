@@ -122,3 +122,9 @@ if __name__ == '__main__':
     ImgViewer = ImageView("main_group")
     ImgViewer.newImage("data/TestImage.png")
 
+    # DPG Render Context
+    dpg.setup_dearpygui()
+    dpg.show_viewport()
+    dpg.start_dearpygui()
+    dpg.destroy_context()
+    
