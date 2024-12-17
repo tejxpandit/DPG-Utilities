@@ -117,3 +117,8 @@ if __name__ == '__main__':
     # DPG Window
     dpg.add_window(label="Image Viewer", tag="img_view")
     dpg.add_group(parent="img_view", tag="main_group")
+
+    # DPG Image Viewer Example
+    ImgViewer = ImageView("main_group")
+    ImgViewer.newImage("data/TestImage.png")
+
